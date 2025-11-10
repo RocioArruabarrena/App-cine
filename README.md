@@ -58,25 +58,48 @@ npm install
 Ejecutar la app:
 npx expo start
 
+Configuración de la API de TMDB (src/api/config.js)
+Este proyecto utiliza la API pública de The Movie Database (TMDB) para obtener información sobre películas, como títulos, descripciones, imágenes, géneros y más.
+Para que la aplicación funcione correctamente, necesitás una API Key de TMDB.
+
+Paso 1: Obtener tu API Key
+Entrá a https://www.themoviedb.org
+Creá una cuenta gratuita o iniciá sesión.
+En tu perfil, abrí Settings → API → Create API Key.
+Copia la clave (API Key v3 auth).
+
+Paso 2: Configurar tu clave en el proyecto
+En el archivo: config/config.js
+Reemplaza 'TU_TMDB_API_KEY_AQUI' por tu clave personal de TMDB.
+Ejemplo:
+''export const TMDB_API_KEY = '123abc456def789ghi';''
 
 
 Abrí la app Expo Go y escaneá el código QR, o ejecutala en tu emulador Android/iOS.
 
+
 Estructura base del proyecto:
 
-cine-app/
- ├── /screens
- │    ├── LoginScreen.js
- │    ├── PeliculasScreen.js
- │    └── AdminUsuariosScreen.js
- ├── /database
- │    └── db.js
- ├── /components
- │    └── BotonPersonalizado.js
+📂 proyecto/
  ├── App.js
- ├── app.json
- ├── package.json
- └── README.md
+ ├── components/
+ │    └── PeliculaTarjeta.js
+ ├── config/
+ │    └── config.js
+ ├── context/
+ │    └── Autenticacion.js
+ ├── database/
+ │    └── db.js   (maneja usuarios y conexión local)
+ ├── screens/
+ │    ├── Detalles.js
+ │    ├── FormularioUsuario.js
+ │    ├── GestionUsuario.js
+ │    ├── Login.js
+ │    └── Peliculas.js
+ ├── services/
+ │    └── tmdb.js
+ ├── App.js
+
 
 
 Proyecto desarrollado por Rocío Arruabarrena como práctica integral de desarrollo móvil.
