@@ -41,7 +41,7 @@ function RootNavigator() {
         ) : user.rol === "admin" ? (
           <>
             <Stack.Screen name="PanelAdmin" component={GestionUsuario} options={{ title: "Usuarios" }} />
-            <Stack.Screen name="AñadirUser" component={FormularioUsuario} options={{ title: "Nuevo Usuario" }} />
+            <Stack.Screen name="AddUser" component={FormularioUsuario} options={{ title: "Nuevo Usuario" }} />
             <Stack.Screen name="EditarUser" component={FormularioUsuario} options={{ title: "Editar Usuario" }} />
           </>
         ) : (

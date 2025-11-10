@@ -40,7 +40,7 @@ export default function GestionUsuario({ navigation }) {
               <Text style={styles.nombre}>{item.nombre} — {item.rol}</Text>
             </View>
             <View style={styles.actions}>
-              <Button title="Editar" onPress={() => navigation.navigate('EditUser', { id: item.id })} />
+              <Button title="Editar" onPress={() => navigation.navigate('FormularioUsuario', { id: item.id })} />
               <Button color="#ef4444" title="Eliminar" onPress={() => handleDelete(item.id)} />
             </View>
           </View>

@@ -24,7 +24,7 @@ export default function Peliculas({ navigation }) {
       <FlatList
         data={movies}
         keyExtractor={(i) => i.id.toString()}
-        renderItem={({ item }) => <MovieCard movie={item} onPress={(m) => navigation.navigate('MovieDetail', { id: m.id })} />}
+        renderItem={({ item }) => <MovieCard movie={item} onPress={(m) => navigation.navigate('Detalles', { id: m.id })} />}
       />
     </View>
   );
