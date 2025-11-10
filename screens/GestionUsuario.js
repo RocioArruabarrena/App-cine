@@ -29,7 +29,7 @@ export default function GestionUsuario({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Button title="Crear usuario" onPress={() => navigation.navigate('AddUser')} />
+      <Button title="Crear usuario" onPress={() => navigation.navigate('FormularioUsuario')} />
       <FlatList
         data={users}
         keyExtractor={(i) => i.id.toString()}
