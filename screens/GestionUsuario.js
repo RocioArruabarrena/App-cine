@@ -29,7 +29,7 @@ export default function GestionUsuario({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Button title="Crear usuario" onPress={() => navigation.navigate('FormularioUsuario')} />
+      <Button title="Crear usuario" onPress={() => navigation.navigate('AddUser')} />
       <FlatList
         data={users}
         keyExtractor={(i) => i.id.toString()}
@@ -40,7 +40,7 @@ export default function GestionUsuario({ navigation }) {
               <Text style={styles.nombre}>{item.nombre} — {item.rol}</Text>
             </View>
             <View style={styles.actions}>
-              <Button title="Editar" onPress={() => navigation.navigate('FormularioUsuario', { id: item.id })} />
+              <Button title="Editar" onPress={() => navigation.navigate('EditarUser', { id: item.id })} />
               <Button color="#ef4444" title="Eliminar" onPress={() => handleDelete(item.id)} />
             </View>
           </View>
