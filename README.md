@@ -1,50 +1,82 @@
-# Welcome to your Expo app 👋
+🎬 CineApp — Gestión y Exploración de Películas
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicación móvil creada con React Native (Expo) que combina un sistema local de autenticación usando SQLite y la visualización de películas desde la API de The Movie DB.
+El objetivo del proyecto es implementar manejo de roles, CRUD de usuarios y conexión con servicios externos, con un diseño simple y funcional.
 
-## Get started
+Funcionalidades principales:
+Sistema de login
+Validación de credenciales en SQLite.
+Sesión persistente hasta realizar logout.
 
-1. Install dependencies
 
-   ```bash
-   npm install
-   ```
 
-2. Start the app
+Redirección según el rol del usuario:
 
-   ```bash
-   npx expo start
-   ```
+Admin → Panel de gestión de usuarios (CRUD).
 
-In the output, you'll find options to open the app in a
+User → Pantalla con películas de The Movie DB.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Get a fresh project
+Rol administrador:
 
-When you're ready, run:
+Puede crear, editar y eliminar usuarios.
 
-```bash
-npm run reset-project
-```
+No puede eliminar su propia cuenta.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+CRUD completamente local con SQLite.
 
-## Learn more
 
-To learn more about developing your project with Expo, look at the following resources:
+Rol usuario estándar:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Visualiza películas obtenidas desde la API pública de The Movie DB.
 
-## Join the community
+Puede buscar, filtrar y ver detalles de cada película.
 
-Join our community of developers creating universal apps.
+Tecnologías utilizadas:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Expo (React Native)
+
+SQLite (expo-sqlite)
+
+React Navigation
+
+The Movie DB API
+
+
+
+Instalación y ejecución:
+
+Clonar el repositorio:
+git clone https://github.com/tuusuario/cine-app.git
+cd cine-app
+
+
+Instalar dependencias:
+npm install
+
+Ejecutar la app:
+npx expo start
+
+
+
+Abrí la app Expo Go y escaneá el código QR, o ejecutala en tu emulador Android/iOS.
+
+Estructura base del proyecto:
+
+cine-app/
+ ├── /screens
+ │    ├── LoginScreen.js
+ │    ├── PeliculasScreen.js
+ │    └── AdminUsuariosScreen.js
+ ├── /database
+ │    └── db.js
+ ├── /components
+ │    └── BotonPersonalizado.js
+ ├── App.js
+ ├── app.json
+ ├── package.json
+ └── README.md
+
+
+Proyecto desarrollado por Rocío Arruabarrena como práctica integral de desarrollo móvil.
